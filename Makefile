@@ -8,3 +8,5 @@ test:
 
 clean:
 	@rm -rf node_modules
+
+.PHONY: test
