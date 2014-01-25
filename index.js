@@ -12,6 +12,7 @@ var hasOwnProp = Object.prototype.hasOwnProperty;
  * to `process.env` if not defined already.
  *
  * @param {String} path to .env file, default - .env
+ * @returns {Object}
  * @api public
  */
 
@@ -32,4 +33,6 @@ module.exports = function(location) {
     if (hasOwnProp.call(process.env, key)) return;
     process.env[key] = vars[key];
   });
+
+  return vars;
 };
