@@ -27,7 +27,7 @@ console.log(process.env.NODE_PORT);
 ### Custom path
 
 ```js
-require('envc')('/foo/bar/.env);
+require('envc')('/foo/bar/.env');
 ```
 
 ### NODE_ENV specific files
@@ -49,6 +49,8 @@ index.js:
 require('envc')();
 console.log(process.env.LOADED_FROM); // => test
 ```
+
+Run it:
 
 ```bash
 $ NODE_ENV=test node index
