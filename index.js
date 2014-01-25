@@ -3,20 +3,30 @@
  */
 
 var envfile = require('envfile');
-var resolve = require('path').resolve;
+var path = require('path');
+var exists = require('fs').existsSync;
 var hasOwnProp = Object.prototype.hasOwnProperty;
 
 /**
  * Load given `.env` file and set the variables
  * to `process.env` if not defined already.
  *
- * @param {String} path to .env file [default: .env]
+ * @param {String} path to .env file, default - .env
  * @api public
  */
 
-module.exports = function(path) {
-  path = resolve(path || '.env');
-  var vars = envfile.parseFileSync(path);
+module.exports = function(location) {
+  var vars = null;
+  var env = null;
+
+  location = path.resolve(location || '.env');
+
+  if (process.env.NODE_ENV) {
+    env = location + '.' + process.env.NODE_ENV;
+    if (exists(env)) location = env;
+  }
+
+  vars = envfile.parseFileSync(location);
 
   Object.keys(vars).forEach(function(key) {
     if (hasOwnProp.call(process.env, key)) return;

@@ -16,3 +16,8 @@ t('do not write env variables that already exist', function() {
   env('test/fixtures/2-path');
   assert(process.env.PATH === path);
 });
+
+t('prefer files with .env.{NODE_ENV} over .env', function() {
+  env('test/fixtures/3-ignored');
+  assert(process.env.ENVC_SOURCE === 'test');
+});

@@ -4,7 +4,7 @@ install:
 	@npm install
 
 test:
-	@node_modules/.bin/hydro
+	@NODE_ENV=test node_modules/.bin/hydro
 
 clean:
 	@rm -rf node_modules
