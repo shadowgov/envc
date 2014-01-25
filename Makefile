@@ -6,6 +6,8 @@ install:
 test:
 	@NODE_ENV=test node_modules/.bin/hydro
 
+test-ci: test
+
 clean:
 	@rm -rf node_modules
 
