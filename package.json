@@ -17,7 +17,7 @@
     "envfile": "~1.0.0"
   },
   "devDependencies": {
-    "hydro": "~0.8.11",
+    "hydro": "~0.9.0",
     "hydro-minimal": "0.0.1",
     "hydro-dot": "~1.0.5"
   }
