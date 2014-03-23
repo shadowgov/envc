@@ -18,7 +18,7 @@ var hasOwnProp = Object.prototype.hasOwnProperty;
 
 module.exports = function(location) {
   var vars = null;
-  var env = null;
+  var env = Object.create(null);
 
   location = path.resolve(location || '.env');
 
@@ -27,7 +27,9 @@ module.exports = function(location) {
     if (exists(env)) location = env;
   }
 
-  vars = envfile.parseFileSync(location);
+  try {
+    vars = envfile.parseFileSync(location);
+  } catch (e) {}
 
   Object.keys(vars).forEach(function(key) {
     if (hasOwnProp.call(process.env, key)) return;
