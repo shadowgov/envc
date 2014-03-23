@@ -21,3 +21,9 @@ t('prefer files with .env.{NODE_ENV} over .env', function() {
   env('test/fixtures/3-ignored');
   assert(process.env.ENVC_SOURCE === 'test');
 });
+
+t('do not throw when the file cannot be found', function() {
+  assert.doesNotThrow(function() {
+    env('invalid/path/.env');
+  });
+});
