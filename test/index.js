@@ -1,29 +1,29 @@
-var env = require('../');
+var envc = require('../');
 var assert = require('assert');
 
-t('default location', function() {
-  env();
-  assert(process.env.ENVC);
+test('default location', function() {
+  var env = envc();
+  assert(env.ENVC);
 });
 
-t('custom location', function() {
-  env('test/fixtures/1-envc-one');
-  assert(process.env.ENVC_ONE);
+test('custom location', function() {
+  var env = envc('test/fixtures/1-envc-one');
+  assert(env.ENVC_ONE);
 });
 
-t('do not write env variables that already exist', function() {
+test('do not write env variables that already exist', function() {
   var path = process.env.PATH;
-  env('test/fixtures/2-path');
-  assert(process.env.PATH === path);
+  var env = envc('test/fixtures/2-path');
+  assert.equal(env.PATH, path);
 });
 
-t('prefer files with .env.{NODE_ENV} over .env', function() {
-  env('test/fixtures/3-ignored');
-  assert(process.env.ENVC_SOURCE === 'test');
+test('prefer files with .env.{NODE_ENV} over .env', function() {
+  var env = envc('test/fixtures/3-ignored');
+  assert.equal(env.ENVC_SOURCE, 'test');
 });
 
-t('do not throw when the file cannot be found', function() {
+test('do not throw when the file cannot be found', function() {
   assert.doesNotThrow(function() {
-    env('invalid/path/.env');
+    envc('invalid/path/.env');
   });
 });
