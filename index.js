@@ -4,6 +4,7 @@
 
 var envfile = require('envfile');
 var path = require('path');
+var clone = require('super');
 var exists = require('fs').existsSync;
 var hasOwnProp = Object.prototype.hasOwnProperty;
 
@@ -38,5 +39,5 @@ module.exports = function(location) {
     process.env[key] = vars[key];
   });
 
-  return vars;
+  return clone(process.env);
 };
