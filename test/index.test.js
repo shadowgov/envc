@@ -1,5 +1,5 @@
-var envc = require('../');
 var assert = require('assert');
+var envc = require('../');
 
 test('default location', function() {
   var env = envc();
@@ -7,18 +7,18 @@ test('default location', function() {
 });
 
 test('custom location', function() {
-  var env = envc('test/fixtures/1-envc-one');
+  var env = envc('test/fixtures/envc-one');
   assert(env.ENVC_ONE);
 });
 
 test('do not write env variables that already exist', function() {
   var path = process.env.PATH;
-  var env = envc('test/fixtures/2-path');
+  var env = envc('test/fixtures/path');
   assert.equal(env.PATH, path);
 });
 
 test('prefer files with .env.{NODE_ENV} over .env', function() {
-  var env = envc('test/fixtures/3-ignored');
+  var env = envc('test/fixtures/ignored');
   assert.equal(env.ENVC_SOURCE, 'test');
 });
 
