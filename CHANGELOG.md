@@ -1,4 +1,11 @@
 
+2.0.0-alpha1 / 2014-09-15
+==================
+
+  * Add support for inheritance
+  * Introduce `Loader`
+  * Initial parser
+
 1.1.1 / 2014-03-23
 ==================
 
