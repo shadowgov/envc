@@ -13,9 +13,6 @@
     "type": "git",
     "url": "https://github.com/vesln/envc"
   },
-  "dependencies": {
-    "super": "^0.2.3"
-  },
   "devDependencies": {
     "mini": "^1.1.0"
   }
