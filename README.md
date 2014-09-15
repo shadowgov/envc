@@ -8,52 +8,32 @@ Inspired by [dotenv](https://github.com/bkeepers/dotenv) by Brandon Keepers.
 
 ## Usage
 
-### Default behavior
-
-.env file:
-
-```
-NODE_PORT=4000
-```
-
-index.js:
-
 ```js
-require('envc')();
-
-console.log(process.env.NODE_PORT);
+// `options` are optional
+var env = require('envc')(options);
 ```
 
-### Custom path
+### Options:
 
-```js
-require('envc')('/foo/bar/.env');
+- `path`: Path to the .env file [optional, default: cwd]
+- `name`: Name of the .env file [optional, default: '.env']
+- `nodeenv`: NODE_ENV [optional, default: `process.env.NODE_ENV`]
+- `booleans`: enable boolean parsing, [optional, default: `false`]
+- `numbers`: enable number parsing, [optional, default: `false`]
+
+### Inheritance
+
+envc will try to load:
+
+- {name}
+- {name}.{NODE_ENV}
+
+### Interpolation
+
 ```
-
-### NODE_ENV specific files
-
-.env
-```
-LOADED_FROM=env
-```
-
-.env.test
-
-```
-LOADED_FROM=test
-```
-
-index.js:
-
-```js
-require('envc')();
-console.log(process.env.LOADED_FROM); // => test
-```
-
-Run it:
-
-```bash
-$ NODE_ENV=test node index
+URL_HOST="vesln.com"
+URL_PATH="index"
+URL_FULL="http://#{URL_HOST}/#{URL_PATH}"
 ```
 
 ## Installation

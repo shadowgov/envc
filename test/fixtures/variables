@@ -1,0 +1,6 @@
+A=ok\$ok
+B=ok\${ok}
+C=great
+D="It is ${C}"
+E=It is $C
+F="It \"is\" $C"

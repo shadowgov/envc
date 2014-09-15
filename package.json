@@ -5,20 +5,15 @@
   "homepage": "https://github.com/vesln/envc",
   "author": "Veselin Todorov <hi@vesln.com>",
   "license": "MIT",
-  "main": "index.js",
+  "main": "lib/envc.js",
   "scripts": {
-    "test": "make test"
+    "test": "mini"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/vesln/envc"
   },
-  "dependencies": {
-    "envfile": "~1.0.0"
-  },
   "devDependencies": {
-    "hydro": "~0.9.0",
-    "hydro-minimal": "0.0.1",
-    "hydro-dot": "~1.0.5"
+    "mini": "^1.1.0"
   }
 }
