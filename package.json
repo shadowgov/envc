@@ -5,7 +5,7 @@
   "homepage": "https://github.com/vesln/envc",
   "author": "Veselin Todorov <hi@vesln.com>",
   "license": "MIT",
-  "main": "index.js",
+  "main": "lib/envc.js",
   "scripts": {
     "test": "mini"
   },
@@ -14,7 +14,6 @@
     "url": "https://github.com/vesln/envc"
   },
   "dependencies": {
-    "envfile": "~1.0.0",
     "super": "^0.2.3"
   },
   "devDependencies": {
