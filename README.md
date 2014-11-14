@@ -1,6 +1,4 @@
-[![Build Status](https://secure.travis-ci.org/vesln/envc.png)](http://travis-ci.org/vesln/envc)
-
-# envc
+# envc [![Build Status](http://img.shields.io/travis/vesln/envc.svg)](https://travis-ci.org/vesln/envc) [![NPM version](http://img.shields.io/npm/v/envc.svg)](https://www.npmjs.org/package/envc) [![NPM downloads](http://img.shields.io/npm/dm/envc.svg)](https://www.npmjs.org/package/envc) [![LICENSE](http://img.shields.io/npm/l/envc.svg)](LICENSE)
 
 > Loads environment variables from .env files.
 
@@ -44,4 +42,5 @@ $ npm install envc
 
 ## License
 
-MIT License
+  [MIT](license)
+
