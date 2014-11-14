@@ -1,6 +1,6 @@
 {
   "name": "envc",
-  "version": "2.0.0-alpha1",
+  "version": "2.0.0",
   "description": "Loads environment variables from dotenv files",
   "homepage": "https://github.com/vesln/envc",
   "author": "Veselin Todorov <hi@vesln.com>",

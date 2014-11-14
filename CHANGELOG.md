@@ -1,4 +1,10 @@
 
+2.0.0 / 2014-11-14 
+==================
+
+ * Merge pull request #1 from wilmoore/return-only-parsed
+ * return only parsed keys/values
+
 2.0.0-alpha1 / 2014-09-15
 ==================
 
