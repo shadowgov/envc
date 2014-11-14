@@ -15,5 +15,8 @@
   },
   "devDependencies": {
     "mini": "^1.1.0"
+  },
+  "dependencies": {
+    "params": "^0.1.1"
   }
 }
