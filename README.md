@@ -31,7 +31,7 @@ envc will try to load:
 ```
 URL_HOST="vesln.com"
 URL_PATH="index"
-URL_FULL="http://#{URL_HOST}/#{URL_PATH}"
+URL_FULL="http://${URL_HOST}/${URL_PATH}"
 ```
 
 ## Installation
