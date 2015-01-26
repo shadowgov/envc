@@ -1,3 +1,9 @@
+2.0.1 / 2015-01-26
+==================
+
+ * Merge pull request #5 from wilmoore/ignore-empty-lines
+ * Correct empty line parsing (fixes #4)
+ * readme: fix interpolation mis-representation
 
 2.0.0 / 2014-11-14 
 ==================
