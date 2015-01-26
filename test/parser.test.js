@@ -47,6 +47,13 @@ test('comments', function() {
   assert.strictEqual(env.A, 'This is great ');
 });
 
+test('empty lines', function() {
+  var env = parse('empty-lines');
+
+  assert.strictEqual(env.A, 'ok');
+  assert.strictEqual(env.B, 'ok');
+});
+
 test('unquoted', function() {
   var env = parse('unquoted');
 
