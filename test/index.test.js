@@ -32,3 +32,14 @@ test('inheritance', function() {
   assert.equal(process.env.A, 1);
   assert.equal(process.env.B, 3);
 });
+
+test('read only', function() {
+  var parsed = envc({
+    path: 'test/fixtures',
+    name: 'readonly',
+    readonly: true
+  });
+
+  assert.notEqual(process.env.SECRET, '42');
+  assert.equal(parsed.SECRET, '42');
+});

@@ -18,6 +18,7 @@ var env = require('envc')(options);
 - `nodeenv`: NODE_ENV [optional, default: `process.env.NODE_ENV`]
 - `booleans`: enable boolean parsing, [optional, default: `false`]
 - `numbers`: enable number parsing, [optional, default: `false`]
+- `readonly`: load and parse .env file only (i.e. does not modify `process.env`), [optional, default: `false`]
 
 ### Inheritance
 
