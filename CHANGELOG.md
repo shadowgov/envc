@@ -1,3 +1,10 @@
+
+2.1.9 / 2015-02-04
+==================
+
+ * Merge pull request #6 from wilmoore/readonly-option
+ * support readonly option
+
 2.0.1 / 2015-01-26
 ==================
 
