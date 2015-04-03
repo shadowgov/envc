@@ -1,5 +1,12 @@
 
-2.1.9 / 2015-02-04
+2.2.0 / 2015-04-03
+==================
+
+  * Handle undefined values
+  * Use default node environment if none
+
+
+2.1.0 / 2015-02-04
 ==================
 
  * Merge pull request #6 from wilmoore/readonly-option
@@ -12,7 +19,7 @@
  * Correct empty line parsing (fixes #4)
  * readme: fix interpolation mis-representation
 
-2.0.0 / 2014-11-14 
+2.0.0 / 2014-11-14
 ==================
 
  * Merge pull request #1 from wilmoore/return-only-parsed
