@@ -106,3 +106,10 @@ test('unescape', function() {
 
   assert.strictEqual(env.A, 'It "is" "great"');
 });
+
+test('undefined', function() {
+  var env = parse('undefined');
+
+  assert.strictEqual(env.FOO, undefined);
+  assert.strictEqual(env.BAR, undefined);
+});
