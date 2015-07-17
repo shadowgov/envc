@@ -15,10 +15,11 @@ var env = require('envc')(options);
 
 - `path`: Path to the .env file [optional, default: cwd]
 - `name`: Name of the .env file [optional, default: '.env']
-- `nodeenv`: NODE_ENV [optional, default: `process.env.NODE_ENV`]
+- `nodeenv`: `NODE_ENV` [optional, default: `process.env.NODE_ENV`]
 - `booleans`: enable boolean parsing, [optional, default: `false`]
 - `numbers`: enable number parsing, [optional, default: `false`]
 - `readonly`: load and parse .env file only (i.e. does not modify `process.env`), [optional, default: `false`]
+- `overwrite`: allow `process.env` to overwrite file values [optional, default: `false`]
 
 ### Inheritance
 
@@ -37,8 +38,8 @@ URL_FULL="http://${URL_HOST}/${URL_PATH}"
 
 ## Installation
 
-```js
-$ npm install envc
+```sh
+npm install envc
 ```
 
 ## License

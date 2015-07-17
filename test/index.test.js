@@ -43,3 +43,25 @@ test('read only', function() {
   assert.notEqual(process.env.SECRET, '42');
   assert.equal(parsed.SECRET, '42');
 });
+
+test('overwrite', function() {
+  process.env.OVERWRITE_A = 'foo';
+  process.env.OVERWRITE_B = '42'
+  process.env.OVERWRITE_C = 'true'
+
+  var parsed = envc({
+    path: 'test/fixtures',
+    name: 'overwrite',
+    overwrite: true,
+    booleans: true,
+    numbers: true
+  });
+
+  assert.equal(parsed.OVERWRITE_A, 'foo');
+  assert.equal(parsed.OVERWRITE_B, 42);
+  assert.equal(parsed.OVERWRITE_C, true);
+
+  delete process.env.OVERWRITE_A;
+  delete process.env.OVERWRITE_B;
+  delete process.env.OVERWRITE_C;
+});
