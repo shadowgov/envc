@@ -61,6 +61,18 @@ test('overwrite', function() {
   assert.equal(parsed.OVERWRITE_B, 42);
   assert.equal(parsed.OVERWRITE_C, true);
 
+  var parsed = envc({
+    path: 'test/fixtures',
+    name: 'overwrite',
+    overwrite: false, // default
+    booleans: true,
+    numbers: true
+  });
+
+  assert.equal(parsed.OVERWRITE_A, 'a');
+  assert.equal(parsed.OVERWRITE_B, 84);
+  assert.equal(parsed.OVERWRITE_C, false);
+
   delete process.env.OVERWRITE_A;
   delete process.env.OVERWRITE_B;
   delete process.env.OVERWRITE_C;
