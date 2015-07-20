@@ -1,4 +1,11 @@
 
+2.3.0 / 2015-07-20
+==================
+
+  * Merge pull request #10 from vesln/feature/overwrite
+  * overwrite test for default behavior
+  * option: overwrite allows process.env to take overwrite file values
+
 2.2.0 / 2015-04-03
 ==================
 
