@@ -1,4 +1,10 @@
 
+2.3.1 / 2015-07-30
+==================
+
+  * Merge pull request #11 from vesln/bug/ips
+  * code + tests for not parsing ips as numbers
+
 2.3.0 / 2015-07-20
 ==================
 
