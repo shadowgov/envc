@@ -18,6 +18,11 @@ test('numbers', function() {
   assert.strictEqual(env.D, 4);
 });
 
+test('ips when numbers enabled', function() {
+  var env = parse('ips', { numbers: true })
+  assert.strictEqual(env.IP_ADDRESS, '192.168.1.100')
+});
+
 test('numbers when disabled', function() {
   var env = parse('numbers', { numbers: false });
 
