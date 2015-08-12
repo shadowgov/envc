@@ -59,6 +59,13 @@ test('empty lines', function() {
   assert.strictEqual(env.B, 'ok');
 });
 
+test('carriage returns', function() {
+  var env = parse('carriage-returns');
+
+  assert.strictEqual(env.A, 'ok');
+  assert.strictEqual(env.B, 'ok');
+});
+
 test('unquoted', function() {
   var env = parse('unquoted');
 
