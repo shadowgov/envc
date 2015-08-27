@@ -1,0 +1,4 @@
+CMD1=$(echo "foo")
+CMD2=$(echo "(foo2)")
+CMD3=$(echo "127.0.0.1"):11211
+CMD4=$(echo "127.0.0.1"):$CMD1
