@@ -34,7 +34,7 @@ envc will try to load:
 URL_HOST="vesln.com"
 URL_PATH="index"
 URL_FULL="http://${URL_HOST}/${URL_PATH}"
-DOCKER_SERVICE=$(boot2docker ip):11211
+DOCKER_SERVICE=$(boot2docker ip):11211 # works on node 0.12+
 ```
 
 ## Installation
