@@ -125,3 +125,12 @@ test('undefined', function() {
   assert.strictEqual(env.FOO, undefined);
   assert.strictEqual(env.BAR, undefined);
 });
+
+test('commands', function() {
+  var env = parse('commands');
+
+  assert.strictEqual(env.CMD1, 'foo');
+  assert.strictEqual(env.CMD2, '(foo2)');
+  assert.strictEqual(env.CMD3, '127.0.0.1:11211');
+  assert.strictEqual(env.CMD4, '127.0.0.1:foo');
+});
