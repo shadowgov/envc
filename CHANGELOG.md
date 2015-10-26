@@ -1,4 +1,10 @@
 
+2.4.1 / 2015-10-26
+==================
+
+  * Merge pull request #15 from CacheControl/fix-invalid-line
+  * fix invalid line error reporting
+
 2.4.0 / 2015-08-31
 ==================
 
