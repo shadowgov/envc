@@ -126,6 +126,14 @@ test('undefined', function() {
   assert.strictEqual(env.BAR, undefined);
 });
 
+test('invalid', function() {
+  try {
+    parse('invalid');
+  } catch(ex) {
+    assert.strictEqual(ex.message, "envc: Invalid line: FOO!=20")
+  }
+});
+
 test('commands', function() {
   var env = parse('commands');
 
