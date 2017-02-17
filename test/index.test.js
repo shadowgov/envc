@@ -21,6 +21,11 @@ test('prefer files with .env.{NODE_ENV} over .env', function() {
   assert.equal(process.env.ENVC_SOURCE, 'test');
 });
 
+test('prefer files with .env.local over .env.{NODE_ENV}', function() {
+  envc({ path: 'test/fixtures', name: 'local' });
+  assert.equal(process.env.ENVC_SOURCE, 'local');
+});
+
 test('do not throw when the file cannot be found', function() {
   assert.doesNotThrow(function() {
     envc({ path: 'invalid/path' });
