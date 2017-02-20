@@ -27,6 +27,7 @@ envc will try to load:
 
 - {name}
 - {name}.{NODE_ENV}
+- {name}.local
 
 ### Interpolation
 
